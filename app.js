@@ -12,8 +12,8 @@ function makeTraveler(name){
 
 }
 
-let test= makeTraveler("Kim");
-console.log(test);
+let kim = makeTraveler("Kim");
+console.log(kim);
 
 
 function makeWagon(capacity){
@@ -23,8 +23,8 @@ function makeWagon(capacity){
     }
 }
 
-let test2 = makeWagon(100);
-console.log(test2);
+let BigWagon = makeWagon(100);
+console.log(BigWagon);
 
 
 function eat(traveler){
@@ -36,6 +36,17 @@ function eat(traveler){
     return traveler;
     }
 
-let traveler1= eat(test);
+let traveler1= eat(kim);
 console.log(traveler1);
 
+
+function join(wagon, traveler){
+    let totalPeople = 0;
+    if ((totalPeople+ 1) < wagon.wagonCapacity){
+        wagon.passengers = totalPeople + 1;
+        wagon.passengers.push;
+    }
+return wagon;
+    }
+
+console.log(join(BigWagon, "Kim"));
