@@ -31,6 +31,21 @@ console.log(BigWagon);
 let SmallWagon = makeWagon(5);
 
 
+function hunt(traveler){
+    if(Math.random() > .5){
+     traveler.amount = traveler.amount + 100;
+    }
+    return traveler.amount;
+    }
+    
+
+console.log(hunt(kim));
+
+
+
+
+
+
 function eat(traveler){
     if (traveler.amount> 19){
         traveler.amount = traveler.amount - 20;
