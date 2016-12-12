@@ -15,6 +15,8 @@ function makeTraveler(name){
 let kim = makeTraveler("Kim");
 console.log(kim);
 
+let henrietta = makeTraveler("Henrietta");
+let juan = makeTraveler("Juan");
 
 function makeWagon(capacity){
     return{
@@ -26,6 +28,8 @@ function makeWagon(capacity){
 let BigWagon = makeWagon(100);
 console.log(BigWagon);
 
+let SmallWagon = makeWagon(5);
+
 
 function eat(traveler){
     if (traveler.amount> 19){
@@ -36,8 +40,8 @@ function eat(traveler){
     return traveler;
     }
 
-let traveler1= eat(kim);
-console.log(traveler1);
+
+console.log(eat(kim));
 
 
 function join(wagon, traveler){
@@ -49,7 +53,8 @@ return wagon;
     }
 
 console.log(join(BigWagon, kim));
-
+console.log(join(SmallWagon, henrietta));
+console.log(join(SmallWagon, juan));
 
 function quarantine(wagon){
     for(i = 0; i < wagon.passengers.length; i++){
@@ -62,6 +67,7 @@ function quarantine(wagon){
 }
 console.log(BigWagon);
 console.log(quarantine(BigWagon));
+console.log(quarantine(SmallWagon));
 
 function food(wagon){
     let totalFood=0;
@@ -71,4 +77,5 @@ function food(wagon){
     return totalFood;
 }
 console.log(food(BigWagon));
+console.log(food(SmallWagon));
 
