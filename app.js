@@ -41,12 +41,34 @@ console.log(traveler1);
 
 
 function join(wagon, traveler){
-    let totalPeople = 0;
-    if ((totalPeople+ 1) < wagon.wagonCapacity){
-        wagon.passengers = totalPeople + 1;
-        wagon.passengers.push;
+    let totalPeople = wagon.passengers.length;
+    if ((totalPeople+ 1) <= wagon.wagonCapacity){
+        wagon.passengers.push(traveler);
     }
 return wagon;
     }
 
-console.log(join(BigWagon, "Kim"));
+console.log(join(BigWagon, kim));
+
+
+function quarantine(wagon){
+    for(i = 0; i < wagon.passengers.length; i++){
+        if (wagon.passengers[i].isHealthy === false){
+            return true;
+        }
+        
+    }
+    return false;
+}
+console.log(BigWagon);
+console.log(quarantine(BigWagon));
+
+function food(wagon){
+    let totalFood=0;
+    for(i = 0; i < wagon.passengers.length; i++){
+        totalFood=totalFood + wagon.passengers[i].amount;
+    }
+    return totalFood;
+}
+console.log(food(BigWagon));
+
